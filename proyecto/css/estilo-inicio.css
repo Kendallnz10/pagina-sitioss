@@ -1,0 +1,54 @@
+body{
+	background-color: #1a1a2e;
+	min-height: 100vh;
+}
+.hero{
+	max-width: 900px;
+	margin: 60px auto 0 auto;
+	padding: 0 20px;
+	text-align: center;
+	color: #fff;
+}
+.hero h1{
+	font-size: 2.4em;
+	margin-bottom: 10px;
+}
+.hero p{
+	font-size: 1.1em;
+	color: #c7c7dd;
+	line-height: 1.5;
+}
+.tarjetas-inicio{
+	max-width: 900px;
+	margin: 40px auto 60px auto;
+	padding: 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 25px;
+}
+.tarjeta-inicio{
+	width: 260px;
+	background-color: #25253f;
+	border-radius: 10px;
+	padding: 25px 20px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+	transition: transform 0.2s ease, background-color 0.2s ease;
+	display: block;
+}
+.tarjeta-inicio:hover{
+	background-color: #34345a;
+	transform: translateY(-5px);
+}
+.tarjeta-inicio h2{
+	margin: 0 0 10px 0;
+	font-size: 1.3em;
+}
+.tarjeta-inicio p{
+	margin: 0;
+	color: #c7c7dd;
+	font-size: 0.95em;
+}
