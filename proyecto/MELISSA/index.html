@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Melissa - Ejercicios de Clase</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo-menu.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo-global.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+	<ul class="menu">
+		<li><a href="#" onclick="mostrarSeccion('acerca'); return false;">Inicio</a></li>
+		<li><a href="#" onclick="mostrarSeccion('acerca'); return false;">Acerca de</a></li>
+		<li><a href="#" onclick="mostrarSeccion('banderas'); return false;">Banderas</a></li>
+		<li><a href="#" onclick="mostrarSeccion('quizzes'); return false;">Quizzes</a></li>
+		<li><a href="#" onclick="mostrarSeccion('contacto'); return false;">Contáctenos</a></li>
+	</ul>
+
+	<div class="encabezado">
+		<h1><i class="fa-solid fa-user"></i> Melissa - Ejercicios de Clase</h1>
+		<p>Menú, tipografía, iconos y reglas de CSS vistas en clase</p>
+	</div>
+
+	<div class="contenedor seccion" id="acerca">
+		<h2><i class="fa-solid fa-circle-info"></i> Acerca de</h2>
+		<div class="tarjeta-intro">
+			<p>
+				Este proyecto integra el menú de navegación brindado por el profesor
+				junto con tipografía, iconos y reglas de CSS vistas en clase
+				(Grid, Flexbox, gradientes, transiciones y sombras).
+			</p>
+			<p><strong>Realizado por:</strong> Melissa</p>
+		</div>
+	</div>
+
+	<div class="contenedor seccion" id="banderas">
+		<h2><i class="fa-solid fa-flag"></i> Banderas</h2>
+		<div class="galeria-banderas">
+
+			<div class="tarjeta-bandera">
+				<div class="bandera bandera-costa-rica"></div>
+				<p><i class="fa-solid fa-flag"></i> Costa Rica</p>
+			</div>
+
+			<div class="tarjeta-bandera">
+				<div class="bandera bandera-mexico"></div>
+				<p><i class="fa-solid fa-flag"></i> México</p>
+			</div>
+
+			<div class="tarjeta-bandera">
+				<div class="bandera bandera-espana"></div>
+				<p><i class="fa-solid fa-flag"></i> España</p>
+			</div>
+
+			<div class="tarjeta-bandera">
+				<div class="bandera bandera-italia"></div>
+				<p><i class="fa-solid fa-flag"></i> Italia</p>
+			</div>
+
+			<div class="tarjeta-bandera">
+				<div class="bandera bandera-japon"></div>
+				<p><i class="fa-solid fa-flag"></i> Japón</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="contenedor seccion" id="quizzes">
+		<h2><i class="fa-solid fa-clipboard-check"></i> Quizzes</h2>
+		<div class="lista-quizzes">
+
+			<div class="tarjeta-quiz-foto">
+				<img src="fotos/quiz-nextjs.jpg" alt="Quiz Next.js">
+			</div>
+
+			<div class="tarjeta-quiz-foto">
+				<img src="fotos/quiz-nodejs.jpg" alt="Quiz Node.js">
+			</div>
+
+			<div class="tarjeta-quiz-foto">
+				<img src="fotos/quiz-django.jpg" alt="Quiz Django Grupo 3">
+			</div>
+
+			<div class="tarjeta-quiz-foto">
+				<img src="fotos/quiz-final.jpg" alt="Resultado final del quiz">
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="seccion" id="contacto">
+		<p><i class="fa-solid fa-code"></i> Página de Melissa &mdash; Proyecto CUC 2026</p>
+	</footer>
+
+	<script>
+		function mostrarSeccion(id) {
+			document.querySelectorAll('.seccion').forEach(function (sec) {
+				sec.style.display = 'none';
+			});
+			document.getElementById(id).style.display = 'block';
+			window.scrollTo(0, 0);
+		}
+
+		// Al cargar la página, mostrar solo "Acerca de"
+		mostrarSeccion('acerca');
+	</script>
+
+</body>
+</html>

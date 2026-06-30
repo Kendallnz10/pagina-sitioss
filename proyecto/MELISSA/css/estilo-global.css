@@ -1,0 +1,323 @@
+/* ============================================
+   TIPOGRAFIA - Google Fonts (vista en clase)
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', Arial, sans-serif;
+	background-color: #f4f4f4;
+	color: #222;
+}
+
+h1, h2, h3 {
+	font-family: 'Poppins', sans-serif;
+}
+
+/* ============================================
+   ENCABEZADO DEL PROYECTO
+   ============================================ */
+.encabezado {
+	text-align: center;
+	padding: 30px 20px;
+	background: linear-gradient(135deg, #333, #555);
+	color: #fff;
+}
+
+.encabezado h1 {
+	margin: 0 0 8px 0;
+	font-size: 2rem;
+}
+
+.encabezado p {
+	margin: 0;
+	font-weight: 300;
+	opacity: .9;
+}
+
+/* ============================================
+   CONTENEDOR GENERAL
+   ============================================ */
+.contenedor {
+	max-width: 900px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.contenedor h2 {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border-bottom: 3px solid #ec7e11;
+	padding-bottom: 10px;
+}
+
+.contenedor h2 i {
+	color: #ec7e11;
+}
+
+.tarjeta-intro {
+	background: #fff;
+	border-radius: 10px;
+	padding: 25px;
+	box-shadow: 0 4px 10px rgba(0,0,0,.08);
+	line-height: 1.6;
+}
+
+/* ============================================
+   GALERIA DE BANDERAS (CSS puro, sin imagenes)
+   ============================================ */
+.galeria-banderas {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 25px;
+	margin-top: 25px;
+}
+
+.tarjeta-bandera {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0,0,0,.08);
+	text-align: center;
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tarjeta-bandera:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 10px 18px rgba(0,0,0,.15);
+}
+
+.bandera {
+	width: 100%;
+	height: 130px;
+	border: 1px solid #ddd;
+}
+
+.tarjeta-bandera p {
+	margin: 0;
+	padding: 12px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+
+.tarjeta-bandera p i {
+	color: #ec7e11;
+}
+
+/* --- Banderas hechas con CSS (gradientes y formas) --- */
+.bandera-costa-rica {
+	background: linear-gradient(
+		to bottom,
+		#002B7F 0 16.66%,
+		#fff 16.66% 33.33%,
+		#CE1126 33.33% 66.66%,
+		#fff 66.66% 83.33%,
+		#002B7F 83.33% 100%
+	);
+}
+
+.bandera-mexico {
+	background: linear-gradient(
+		to right,
+		#006847 0 33.33%,
+		#fff 33.33% 66.66%,
+		#CE1126 66.66% 100%
+	);
+}
+
+.bandera-espana {
+	background: linear-gradient(
+		to bottom,
+		#AA151B 0 25%,
+		#F1BF00 25% 75%,
+		#AA151B 75% 100%
+	);
+}
+
+.bandera-italia {
+	background: linear-gradient(
+		to right,
+		#008C45 0 33.33%,
+		#fff 33.33% 66.66%,
+		#CD212A 66.66% 100%
+	);
+}
+
+.bandera-japon {
+	background: #fff;
+	position: relative;
+}
+
+.bandera-japon::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 55px;
+	height: 55px;
+	background: #BC002D;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* ============================================
+   QUIZZES (pagina de Melissa)
+   ============================================ */
+.lista-quizzes {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 20px;
+	margin-top: 25px;
+}
+
+.tarjeta-quiz {
+	background: #fff;
+	border-left: 6px solid #70B431;
+	border-radius: 8px;
+	padding: 18px 20px;
+	box-shadow: 0 4px 10px rgba(0,0,0,.08);
+	transition: transform .2s ease;
+}
+
+.tarjeta-quiz:hover {
+	transform: translateX(6px);
+}
+
+.tarjeta-quiz h3 {
+	margin: 0 0 6px 0;
+	font-size: 1.05rem;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tarjeta-quiz h3 i {
+	color: #70B431;
+}
+
+.tarjeta-quiz .nota {
+	font-weight: 700;
+	color: #ec7e11;
+}
+
+/* --- Tarjeta de quiz con foto (captura de Kahoot) --- */
+.tarjeta-quiz-foto {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0,0,0,.08);
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.tarjeta-quiz-foto:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 10px 18px rgba(0,0,0,.15);
+}
+
+.tarjeta-quiz-foto img {
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+	display: block;
+}
+
+.tarjeta-quiz-foto .info-quiz {
+	padding: 14px 16px;
+}
+
+.tarjeta-quiz-foto h3 {
+	margin: 0 0 6px 0;
+	font-size: 1.05rem;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.tarjeta-quiz-foto h3 i {
+	color: #70B431;
+}
+
+/* ============================================
+   GALERIA DE FOTOS DE QUIZZES
+   ============================================ */
+.galeria-fotos-quiz {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	margin-top: 25px;
+}
+
+.foto-quiz {
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0,0,0,.08);
+	transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.foto-quiz:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 10px 18px rgba(0,0,0,.15);
+}
+
+.foto-quiz img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	display: block;
+	border-bottom: 3px solid #ec7e11;
+}
+
+.foto-quiz .marcador-vacio {
+	width: 100%;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	background: #f0f0f0;
+	color: #999;
+	border-bottom: 3px dashed #ccc;
+	font-size: .85rem;
+	text-align: center;
+	padding: 10px;
+}
+
+.foto-quiz .marcador-vacio i {
+	font-size: 1.8rem;
+	color: #bbb;
+}
+
+.foto-quiz p {
+	margin: 0;
+	padding: 10px 12px;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: .9rem;
+	text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+	text-align: center;
+	padding: 20px;
+	margin-top: 50px;
+	background: #333;
+	color: #ccc;
+	font-size: .9rem;
+}
+
+footer i {
+	color: #ec7e11;
+}
